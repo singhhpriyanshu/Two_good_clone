@@ -1,0 +1,503 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+*::selection{
+    color: white;
+    background-color: black;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #F7F7F7;
+}
+
+#nav{ 
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#nav-part1{
+    height: 82px;
+    overflow: hidden;
+}
+
+#nav-part1 svg{
+    display: block;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+#links{
+    padding: 10px;
+}
+
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 13px;
+    margin: 0 20px;
+}
+
+#nav-part2 #links a:hover{
+    color: rgb(126, 125, 125);
+    text-decoration: underline;
+}
+
+#icons{
+    border-radius: 50px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#nav-part2 #icons i{
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+}
+
+#cursor{
+    height: 220px;
+    width: 220px;
+    background-color: rgb(213, 219, 223);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+
+#page1{
+    min-height: 100vh;
+    /* background-color: aqua; */
+    position: relative;
+    width: 100%;
+    padding: 0 2vw;
+    padding-top: 28vh;
+}
+
+#page1 h1{
+    font-size: 15.5vw;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 14vw;
+    letter-spacing: -7px;
+}
+
+#video-container{
+    height: 100vh;
+    width: 100%;
+    /* background-color: grey; */
+    margin-top: 1vw;
+    position: relative;
+}
+
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play{
+    padding: 3vw 2.3vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: futura;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    padding: 3vw 2vw;
+    justify-content: space-between;
+}
+
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+}
+
+#page2 .elem .dets1{
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: #EDF3FF;
+    transition: height 1s;
+    transition-timing-function: vertical ease 1s;
+}
+
+#page2 .elem .dets1:hover{
+    height: 250px;
+    background-image: url(https://cdn.sanity.io/images/w8f1ak3c/production/adb77436d60e62d2b5b0574016abcc864b8e65b0-4498x2999.png/DSC0078_Dexter%20Kim.png?rect=470,108,3458,2760&fp-x=0.4888698630136987&fp-y=0.49614340367765025&w=320&h=255&fit=crop&crop=focalpoint&auto=format);
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+}
+
+#page2 .elem .dets2{
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: #EDF3FF;
+    transition: height 1s;
+    transition-timing-function: vertical ease 1s;
+}
+
+#page2 .elem .dets2:hover{
+    height: 250px;
+    background-image: url(https://cdn.sanity.io/images/w8f1ak3c/production/51bed63763d7dd75a8a04a6452d5806f71b43a67-2000x2000.png/WhiteLilac.png?w=320&h=320&auto=format);
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+}
+
+#page2 .elem .dets3{
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    background-color: #EDF3FF;
+    transition: height 1s;
+    transition-timing-function: vertical ease 1s;
+}
+
+#page2 .elem .dets3:hover{
+    height: 250px;
+    background-image: url(https://cdn.sanity.io/images/w8f1ak3c/production/63474079ab0c7723b75bd63b24d8bbc652349640-1408x1408.png/Cleanse%20&%20Nourish%20Hand%20Wash%20Two%20Good%20Co.png?w=320&h=320&auto=format);
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+}
+
+#page3{
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child{
+    height: 50vh;
+    width: 38vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child img{
+    height: 100%;
+
+}
+
+#page4{
+    min-height: 100vh;
+    width: 100%;
+}
+
+#page4 #h1tag {
+    padding: 0 2vw;
+    padding-top: 15vh;
+    display: grid; 
+   justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    transition-property: font-size;
+    transition-duration: 1.5s;
+    transition-delay: 1s;
+}
+
+#page4 #h1tag h1{
+    font-family: futura;
+    text-align: center;
+}
+
+#h1tag:hover{
+    font-size: 2.5vw;
+}
+
+#page4 button{
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 35px;
+    padding: 1.5vw 8vh;
+    margin-left: 40%;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: futura;
+    cursor: pointer;
+}
+
+#page4 button:hover{
+    color: lightgrey;
+
+}
+
+#page4 #h3tag h3{
+    margin-left: 40%;
+    font-family: futura;
+    font-weight: lighter;
+}
+
+
+
+@media (max-width:600px){
+
+    #page1{
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+
+    #page1 h1{
+        font-size: 15.5vw;
+        letter-spacing: -3px;
+    }
+
+    #video-container{
+        height: 25vh;
+        width: 100%;
+        margin-top: 3vw;
+        position: relative;
+    }
+
+    #video-container #play{
+        padding: 9.5vw 7.2vw;
+        font-size: 4.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+    }
+
+    #page2{
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 5vw 3vw;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    
+    #page2 .elem{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3vw;
+    }
+
+    #page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+    }
+
+    #page2 .elem .dets{
+        height: 40px;
+        border-radius: 50px;
+        width: 70%;
+        position: absolute;
+        z-index: 9;
+        background-color: palegoldenrod;
+    }
+
+    #page3{
+        min-height: 120vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .child{
+        height: 50vh;
+        width: 88vw;
+        padding: 15vw;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .child img{
+        height: 100%;
+    
+    }
+
+    #nav{ 
+        width: 100%;
+        /* background-color: burlywood; */
+        position: fixed;
+        z-index: 99;
+        padding: 15px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    #nav-part1{
+        height: 67px;
+        overflow: hidden;
+    }
+    
+    #nav-part1 svg{
+        display: block;
+        height: 67px;
+        width: 80px;
+    }
+   #nav #twogoodlogo{
+        height: 40px;
+        margin-left: -20px;
+    }
+    
+    #nav-part2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    #links{
+        padding: 10px;
+        display: none;
+    }
+    
+    #nav-part2 #links a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #333;
+        font-weight: 400;
+        font-size: 13px;
+        margin: 0 20px;
+    }
+    
+    #nav-part2 #links a:hover{
+        color: rgb(126, 125, 125);
+        text-decoration: underline;
+    }
+    
+    #icons{
+        border-radius: 50px;
+        background-color: #fff;
+        padding: 7px;
+    }
+    
+    #nav-part2 #icons i{
+        cursor: pointer;
+        font-size: 15px;
+        margin: 0 20px;
+        font-weight: 100;
+    }
+
+    #page4 #h1tag {
+        padding: 0 2vw;
+        padding-top: 15vh;
+        display: grid; 
+       justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        transition-property: font-size;
+        transition-duration: 1.5s;
+        transition-delay: 1s;
+    }
+    
+    #page4 #h1tag h1{
+        font-family: futura;
+    }
+    
+    #h1tag:hover{
+        
+        font-size: 2.5vw;
+    }
+    
+    #page4 button{
+        border-radius: 50px;
+        align-items: center;
+        justify-content: center;
+        margin: 3px;
+        padding: 3vw 5vh;
+        margin-top: 110%;
+        margin-left: 15%;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        font-family: futura;
+        cursor: pointer;
+    }
+    
+    #page4 button:hover{
+        color: lightgrey;
+    }
+
+    #page4 #h3tag{
+        margin-top: 30px;
+    }
+    
+    #page4 #h3tag h3{
+        margin-left: 20%;
+        font-family: futura;
+        font-size: 3.5vw;
+    }
+    
+    
+
+}
